@@ -19,15 +19,14 @@ android {
         applicationId "com.sanmidev.yetanotherpasswordgenerator"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             testBuildType "release"
-            applicationIdSuffix '.release'
             signingConfig  signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
