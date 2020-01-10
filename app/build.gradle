@@ -5,6 +5,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('/home/sanmi/Documents/playstorekeys/firstplaystorekey.jks')
+            storePassword 'sanmi12'
+            keyAlias = 'key0'
+            keyPassword 'sanmi12'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
@@ -19,6 +27,8 @@ android {
         release {
             minifyEnabled false
             testBuildType "release"
+            applicationIdSuffix '.release'
+            signingConfig  signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
